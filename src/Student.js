@@ -43,11 +43,11 @@ function Student() {
 
     const [userData, setUserData] = useState([]);
 
-    useEffect(() => {   // athunaala thaa useeffect kulla async await fn kudukuro mount aaga
+    useEffect(() => {   
 
         async function getData() {
 
-            const response = await axios.get("https://632050349f82827dcf29ba4b.mockapi.io/user"); // fetch ku pathil axios 
+            const response = await axios.get("https://632050349f82827dcf29ba4b.mockapi.io/user"); 
 
             setUserData(response.data);
 
@@ -55,7 +55,7 @@ function Student() {
 
         getData();
 
-    }, []);      // empty dependency array ethuku na mounting phase naala intha array va empty ya pass panro
+    }, []);
 
     //To handle onChange event
 
@@ -79,7 +79,7 @@ function Student() {
 
     //To handle Edit button
 
-    const onPopulateData = (id) => {  //inga id varu userData la irunthu
+    const onPopulateData = (id) => {  
 
         const selectedData = userData.filter((row) => row.id === id)[0];
 
