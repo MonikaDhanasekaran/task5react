@@ -50,7 +50,7 @@ function Teacher() {
 
         async function getData() {
 
-            const response = await axios.get("https://632050349f82827dcf29ba4b.mockapi.io/Users"); // fetch ku pathil axios 
+            const response = await axios.get("https://632050349f82827dcf29ba4b.mockapi.io/Users"); 
 
             setUserData(response.data);
 
